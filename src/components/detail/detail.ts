@@ -21,11 +21,13 @@ export class Detail {
 				this.movie = data;
 			},
 			err => {
-				return err;
+				this.error = 'The API is not currently available, please try later.';
 			}
 		);
 	}
 
 	public movie: Movie = MOVIE;
+
+	public error: string;
 
 }

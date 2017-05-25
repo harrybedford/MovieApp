@@ -3,6 +3,7 @@
 </md-input-container>
 <br />
 <md-nav-list>
+	<span *ngIf="error">{{error}}</span>
    	<a md-list-item *ngFor="let movie of movies" [routerLink]="['/detail', movie.imdbID]"> 
    		{{ movie.Title }} 
 	</a>

@@ -5,17 +5,17 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 
 const APIKEY = 'cfb35c43';
+const OMDB = 'http://www.omdbapi.com/?apikey=';
  
 @Injectable()
 
 export class DataService {
 
-	constructor(private http: Http
-				) { }
+	constructor(private http: Http) { }
 
 	public search$(searchTerm: string) {
 		return this.http.get(
-			'http://www.omdbapi.com/?apikey=' + APIKEY + '&s=' + searchTerm
+			OMDB + APIKEY + '&s=' + searchTerm
 		)
 		.map(res => {
 			return res.json();
@@ -27,7 +27,7 @@ export class DataService {
 
 	public getMovie$(id: string) {
 		return this.http.get(
-			'http://www.omdbapi.com/?apikey=' + APIKEY + '&i=' + id + '&plot=full'
+			OMDB + APIKEY + '&i=' + id + '&plot=full'
 		)
 		.map(res => {
 			return res.json();

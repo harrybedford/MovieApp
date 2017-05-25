@@ -19,7 +19,7 @@ export class Search {
 					this.movies = data.Search;
 				},
 				error => {
-					return error;
+					this.error = 'The API is not currently available, please try later.';
 				}
 			);
 		} else {
@@ -30,5 +30,7 @@ export class Search {
 	public movies: Array<Result>;
 
 	public searchTerm: string = '';
+
+	public error: string;
 
 }

@@ -1,4 +1,5 @@
-<md-card class="movie-card">
+<span *ngIf="error">{{error}}</span>
+<md-card class="movie-card" *ngIf="!error">
 	<md-card-title>
 		{{movie.Title}} ({{movie.Year}})
 	</md-card-title>
