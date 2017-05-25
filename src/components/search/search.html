@@ -1,0 +1,9 @@
+<md-input-container>
+	<input mdInput [(ngModel)]="searchTerm" (keyup)="search()" placeholder="Search For Movies">
+</md-input-container>
+<br />
+<md-nav-list>
+   	<a md-list-item *ngFor="let movie of movies" [routerLink]="['/detail', movie.imdbID]"> 
+   		{{ movie.Title }} 
+	</a>
+</md-nav-list>

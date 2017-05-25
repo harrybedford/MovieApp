@@ -1,0 +1,15 @@
+<md-card class="movie-card">
+	<md-card-title>
+		{{movie.Title}} ({{movie.Year}})
+	</md-card-title>
+	<md-card-subtitle>
+		Starring: {{movie.Actors}}
+	</md-card-subtitle>
+	<md-card-subtitle>
+		Director: {{movie.Director}}
+	</md-card-subtitle>
+	<md-card-content>
+		{{movie.Plot}}
+	</md-card-content>
+	<img [src]="movie.Poster" md-card-image class="poster">
+</md-card>

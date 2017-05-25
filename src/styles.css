@@ -1,1 +1,36 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+	font-family: 'Roboto', "Helvetica Neue", sans-serif;
+}
+
+.mat-input-container {
+	width: 80%;
+	margin: 0 10%;
+	font-size: 2rem;
+}
+
+md-nav-list {
+	width: 80%;
+	margin: 0 10%;
+	font-size: 1.5rem;
+}
+
+.movie-card {
+  width: 400px;
+  margin: 0 auto;
+}
+
+.mat-card-image.poster {
+	width: 300px;
+	margin: 0 auto;
+	display: block;
+}
+
+@media screen and (max-width: 400px) {
+	.movie-card {
+		width: 100%;
+	}
+}
+
+detail {
+	background-color: black;
+}
