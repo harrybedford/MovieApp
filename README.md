@@ -1,0 +1,5 @@
+- clone the repo
+- cd into the app
+- npm install
+- npm start
+- woila!!!
